@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CA Study Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <button id="back-btn" class="hidden" onclick="app.goBack()">←</button>
+            <h1 id="page-title">CA Study Hub</h1>
+            <div class="header-actions">
+                <button onclick="app.renderSearch()" id="search-btn">🔍</button>
+            </div>
+        </header>
+
+        <!-- Progress Bar (Overall) -->
+        <div id="overall-progress-container" class="progress-bar-wrapper">
+            <div class="progress-info">
+                <span>Overall Progress</span>
+                <span id="overall-percent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="overall-fill" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Dynamic content injected here -->
+        </main>
+
+        <!-- Bottom Navigation (Optional but good for mobile) -->
+        <nav class="bottom-nav">
+            <button onclick="app.renderHome()">🏠 Home</button>
+            <button onclick="app.renderSearch()">🔎 Search</button>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="lectures.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
